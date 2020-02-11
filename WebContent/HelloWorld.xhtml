@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Hello, World!</title>
+</h:head>
+<h:body>
+    <h1>Hello, world!</h1>
+    <h:form>
+        <h:outputLabel value="Informe o nome."/>
+        <h:inputText value="#{helloController.nome1}"/>
+        <h:commandButton value="Executar"/>
+        <h:outputLabel value="#{helloController.nome1}."/>
+    </h:form>
+
+<!--    Teste com PrimeFaces-->
+    <h:form>
+        <p:outputLabel value="Informe o nome."/>
+        <p:inputText value="#{helloController.nome1}"/>
+        <p:commandButton value="Executar"/>
+        <p:outputLabel value="#{helloController.nome1}."/>
+    </h:form>
+
+</h:body>
+</html>
