@@ -15,13 +15,21 @@
         <h:outputLabel value="#{helloController.nome1}."/>
     </h:form>
 
-<!--    Teste com PrimeFaces-->
+    <!--    Teste com PrimeFaces-->
     <h:form>
         <p:outputLabel value="Informe o nome."/>
         <p:inputText value="#{helloController.nome1}"/>
-        <p:commandButton value="Executar"/>
-        <p:outputLabel value="#{helloController.nome1}."/>
+        <p:commandButton update="label" value="Executar"/>
+        <p:outputLabel id="label" value="#{helloController.nome1}."/>
     </h:form>
 
+    <h:form>
+        <h:panelGrid columns="4" cellpadding="5">
+            <h:outputLabel for="name" value="Name:" style="font-weight:bold"/>
+            <p:inputText id="name" value="#{helloController.nome1}"/>
+            <p:commandButton value="Submit" update="display"/>
+            <h:outputText id="display" value="#{helloController.nome1}"/>
+        </h:panelGrid>
+    </h:form>
 </h:body>
 </html>
